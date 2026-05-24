@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>쇼핑 리스트</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🛒 쇼핑 리스트</h1>
+
+    <form id="add-form">
+      <input
+        type="text"
+        id="item-input"
+        placeholder="아이템 입력..."
+        autocomplete="off"
+        maxlength="100"
+      />
+      <button type="submit">추가</button>
+    </form>
+
+    <div class="toolbar">
+      <span id="summary"></span>
+      <button id="clear-checked" class="btn-text">완료 항목 삭제</button>
+    </div>
+
+    <ul id="item-list"></ul>
+
+    <p id="empty-msg" class="empty">아이템을 추가해 보세요!</p>
+
+    <div class="stats" id="stats">
+      <div class="stat-item">
+        <span class="stat-label">전체</span>
+        <span class="stat-value" id="stat-total">0</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-label">완료</span>
+        <span class="stat-value completed" id="stat-checked">0</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-label">남음</span>
+        <span class="stat-value remaining" id="stat-remaining">0</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
